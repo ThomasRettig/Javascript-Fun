@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Recursive:wght@1000&display=swap" rel="stylesheet">
+<link href="./Javascript%20Fun.css" rel="stylesheet">
+<!-- Favicon -->
+<link href="./favicon.png" rel="icon">
+</head>
+
+<body onload="greeting()">
+
+<p id="greeting"></p>
+
+<script>
+function greeting() {
+  var txt;
+  var person = prompt("Please enter your name:", "Donald Trump");
+  if (person == null || person == "") {
+    txt = "dumbo, you either did not answer the question or you cancelled the prompt. You will get due punishment.";
+  } 
+  if (person == "fucking idiot" || person == "fuck" || person == "bitch" || person == "wanker" || person == "idiot" || person == "dumbo") {
+    txt = "and I said, NO BAD WORDS!!! You will get due punishment.";
+  } else {
+    txt = person + "! How are you today?";
+  }
+
+  var greeting;
+  var time = new Date().getHours();
+  if (time < 12) {
+    greeting = "Good morning";
+  } else if (time < 17) {
+    greeting = "Good afternoon";
+  } else {
+    greeting = "Good evening";
+  }
+  document.getElementById("greeting").innerHTML = greeting + ", " + txt;
+}
+</script>
+
+<img src="https://abs.twimg.com/emoji/v2/svg/1f603.svg">
+
+</body>
+</html>
